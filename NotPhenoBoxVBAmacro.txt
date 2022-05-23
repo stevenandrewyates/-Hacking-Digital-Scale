@@ -1,0 +1,16 @@
+Sub RunPythonScript()
+
+Dim objShell As Object
+Dim PythonExePath, PythonScriptPath As String
+
+    Set objShell = VBA.CreateObject("Wscript.Shell")
+    
+    PythonExePath = """C:\Users\yatess\AppData\Local\Microsoft\WindowsApps\python"""
+    PythonScript = "C:\Users\yatess\Documents\Getweight.py"
+    
+    Set ObjExec = objShell.Exec(PythonExePath & " " & PythonScript)
+    
+    strFromProc = ObjExec.StdOut.ReadLine()
+    ActiveCell.Value = strFromProc
+    
+End Sub
