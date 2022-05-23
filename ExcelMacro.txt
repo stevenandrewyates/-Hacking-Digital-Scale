@@ -5,8 +5,8 @@ Dim PythonExePath, PythonScriptPath As String
 
     Set objShell = VBA.CreateObject("Wscript.Shell")
     
-    PythonExePath = """C:\Users\yatess\AppData\Local\Microsoft\WindowsApps\python"""
-    PythonScript = "C:\Users\yatess\Documents\Getweight.py"
+    PythonExePath = """C:\PATH\python"""
+    PythonScript = "C:\PATH\Getweight.py"
     
     Set ObjExec = objShell.Exec(PythonExePath & " " & PythonScript)
     
